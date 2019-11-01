@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $freeswitch = new FreeswitchESL();
         $connect = $freeswitch->connect("127.0.0.1","8021","ClueCon");
-        $version = $freeswitch->api("sofia status");
+        $version = $freeswitch->api("show api");
         dd($version);
     }
 }
