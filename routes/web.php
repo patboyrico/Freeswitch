@@ -12,5 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index');
+// Route::post('/freeswitch', 'HomeController@createFreeswitch')->name('create.freeswitch');
 
 Auth::routes();
+
+Route::get('/xml_handler', 'FreeswitchController@xmlHandler');
+
